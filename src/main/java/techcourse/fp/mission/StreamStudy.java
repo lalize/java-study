@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class StreamStudy {
@@ -51,6 +52,12 @@ public class StreamStudy {
 
         System.out.println(words);
         System.out.println(words.size());
-        // TODO 이 부분에 구현한다.
+        words.stream()
+                .filter(word -> word.length() > 12)
+                .distinct()
+                .sorted(Comparator.comparing(String::length).reversed())
+                .limit(100)
+                .map(String::toLowerCase)
+                .forEach(System.out::println);
     }
 }
