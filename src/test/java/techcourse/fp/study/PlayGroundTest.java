@@ -15,7 +15,7 @@ import java.util.function.Predicate;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static com.sun.deploy.trace.Trace.print;
+//import static com.sun.deploy.trace.Trace.print;
 import static java.util.stream.Collectors.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -90,7 +90,7 @@ class PlayGroundTest {
     static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     public void method(final String message) {
-        executorService.submit(() -> print(message));
+        //executorService.submit(() -> print(message));
     }
 
     @Test
